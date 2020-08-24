@@ -1,0 +1,11 @@
+<% if @friends %>
+<div class="card card-header results-block">
+    <% @friends.each do |friend| %>
+        <strong>Name: </strong> <%= friend.full_name %>
+        <strong>Email:</strong> <%= friend.email %>
+       <%= link_to 'View Profile', '#', class: "btn btn-sm btn-success" %>
+    
+    <%= link_to 'Follow', "#", class: "btn btn-sm btn-success", method: :post %>
+    <% end %>
+</div>
+<% end %>
